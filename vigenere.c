@@ -7,7 +7,7 @@ char codificarString(char *palavras, int tamanhoPalavra, char *chave, int tamanh
 
 int main (void)
 {
-    char chave[] = "segredo";
+    char chave[] = "segredosecreto";
     char palavras[100];
     int verificaAcao;
     printf("Digite a frase:\n");
@@ -18,7 +18,6 @@ int main (void)
 }
 
 char codificarString(char *palavras, int tamanhoPalavra, char *chave, int tamanhoChave){
-    printf("%d \n",tamanhoPalavra);
     
     for(int i = 0, j = 0; i < tamanhoPalavra; i++, j++)
     {
@@ -29,6 +28,6 @@ char codificarString(char *palavras, int tamanhoPalavra, char *chave, int tamanh
             i++;
         }
         char res = ((toupper(palavras[i]))+chave[j])%25+65;
-        printf("%s %d \n",&res, j);
+        printf("%s",&res);
     }
 }
