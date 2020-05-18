@@ -7,29 +7,14 @@ char codificarString(char *palavras, int tamanhoPalavra, char *chave, int tamanh
 
 int main (void)
 {
-    char chave[] = "abc";
+    char chave[] = "segredo";
     char palavras[100];
     int verificaAcao;
     printf("Digite a frase:\n");
     fgets(palavras, 100, stdin);
-    printf("Digite: \n 1 - Para crifrar\n 2 - Para decifrar\n");
-    scanf("%d", &verificaAcao);
-    switch (verificaAcao)
-    {
-    case 1:
-        codificarString(palavras, strlen(palavras)-1, chave, strlen(chave));
-
-        break;
-    case 2:
-       // decodificarPalavra(*palavra);
-        break;
-    default:
-        printf("Tente novamente");
-        break;
-    }
-    
-  printf("\n");  
-  return 0;
+    codificarString(palavras, strlen(palavras)-1, chave, strlen(chave));
+    printf("\n");  
+    return 0;
 }
 
 char codificarString(char *palavras, int tamanhoPalavra, char *chave, int tamanhoChave){
